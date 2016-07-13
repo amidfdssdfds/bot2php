@@ -20,18 +20,21 @@ $update = json_decode(file_get_contents('php://input'));
 if($update->message->text == '/start'){
   var_dump(httpt('sendMessage',[
     'chat_id'=>$update->message->chat->id,
-    'text'=>"Hi Welcome <b>Taylor Team</b> bot\n/contact\nsend developer contact",
+    'text'=>"Hi Welcome <b>Amir White Hat</b> bot\n/contact\nsend developer contact",
     'parse_mode'=>'HTML',
     'reply_markup'=>json_encode([
         'inline_keyboard'=>[
           [
-            ['text'=>'Developer😛',url=>'https://telegram.me/negative']
+            ['text'=>'Developer😛',url=>'https://telegram.me/teleagentsudo']
           ],
           [
-            ['text'=>'Channel',url=>'https://telegram.me/taylor_team']
+            ['text'=>'Channel',url=>'https://telegram.me/amirwhitehat']
           ],
           [
-            ['text'=>'Github',url=>'github.com/taylor-team']
+            ['text'=>'test',url=>'https://telegram.me/']
+          ],
+          [
+            ['text'=>'site',url=>'teleagent.com']
           ]
       ]
   ])
@@ -40,8 +43,8 @@ if($update->message->text == '/start'){
 if($update->message->text == '/contact'){
   var_dump(httpt('sendContact',[
     'chat_id'=>$update->message->chat->id,
-    'phone_number'=>'+98 937 909 7344',
-    'first_name'=>'Neagtive'
+    'phone_number'=>'+989212458149',
+    'first_name'=>'Amir White Hat'
   ]));
 }
 file_put_contents('log',ob_get_clean());
